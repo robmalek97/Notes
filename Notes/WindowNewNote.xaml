@@ -1,0 +1,18 @@
+﻿<Window x:Class="Notes.WindowNewNote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notes"
+        mc:Ignorable="d"
+        Title="WindowNewNote" Height="500" Width="600">
+    <Grid>
+        <Label Content="Nová poznámka" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" FontSize="30"/>
+        <TextBox HorizontalAlignment="Left" Name="txtNoteName" Margin="89,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="White" Background="#FFDDDDDD" FontFamily="Segoe UI Variable Display Semibold" FontSize="14" Height="NaN"/>
+        <TextBox Margin="90,220,90,0" Name="txtNoteText" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Background="#FFDDDDDD" BorderBrush="White" FontFamily="Segoe UI Variable Display Semibold" Height="132"/>
+        <Button Content="Vytvořit" HorizontalAlignment="Center" Margin="0,393,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" Background="#FFC36969" Padding="50,10,50,10" BorderBrush="White" Click="btnCreate_Click" x:Name="btnCreate"/>
+        <Label Content="Název poznámky" HorizontalAlignment="Left" Margin="89,133,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold"/>
+        <Label Content="Obsah poznámky" HorizontalAlignment="Left" Margin="90,194,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold"/>
+
+    </Grid>
+</Window>

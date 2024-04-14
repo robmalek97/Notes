@@ -1,0 +1,61 @@
+﻿<Window x:Class="Notes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="465" Width="850" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Poznámky" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" FontSize="24"/>
+        <Button HorizontalAlignment="Left" Content="" VerticalAlignment="Top" BorderBrush="White" FontSize="14" Width="20" Grid.Column="1" Margin="129,21,0,0" Height="20" Name="binFolder" Click="binFolder_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Icons/320632131667326703-128.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="400" Margin="0,17,0,0" Grid.RowSpan="8" Stroke="Black" VerticalAlignment="Top" Width="1" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="400" Margin="0,17,0,0" Grid.RowSpan="8" Stroke="Black" VerticalAlignment="Top" Width="1" Grid.Column="2"/>
+        <Button HorizontalAlignment="Left" Content="" VerticalAlignment="Top" BorderBrush="White" FontSize="14" Width="20" Grid.Column="4" Margin="76,24,0,0" Height="20" Foreground="#FFCACACA" Name="binNote" Click="binNote_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Icons/320632131667326703-128.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Content="" VerticalAlignment="Top" BorderBrush="White" FontSize="14" Width="20" Grid.Column="4" Margin="111,24,0,0" Height="20" Foreground="#FFCACACA" Name="editNote" Click="editNote_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Icons/9256664211560147103-128.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Nová složka" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" RenderTransformOrigin="0.5,0.5" BorderBrush="White" Padding="5,5,5,5" Name="btnNewFolder" Click="btnNewFolder_Click"/>
+        <Button Content="Nová poznámka" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" RenderTransformOrigin="0.5,0.5" BorderBrush="White" Padding="5,5,5,5" Grid.Column="1" Name="btnNewNote" Click="btnNewNote_Click"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.RowSpan="6" Grid.Row="1">
+            <WrapPanel x:Name="wrapPanelFolders" VerticalAlignment="Top" HorizontalAlignment="Center">
+            </WrapPanel>
+        </ScrollViewer>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.RowSpan="6" Grid.Row="1" Grid.Column="1">
+            <WrapPanel x:Name="wrapPanelNotes" VerticalAlignment="Top" HorizontalAlignment="Center">
+            </WrapPanel>
+        </ScrollViewer>
+        <ScrollViewer Width="473" Height="261" Margin="18,20,18,56" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="6" Grid.Row="2">
+            <TextBlock Name="noteText" TextWrapping="Wrap" Text="" FontFamily="Segoe UI Variable Display Semibold" Width="473" Height="261" Margin="10,0,0,0"/>
+        </ScrollViewer>
+        <TextBlock Grid.Column="3" Name="noteTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Segoe UI Variable Display Semibold" FontSize="18" Margin="0,54,0,0" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
